@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Domain.Entities.Users
 {
-    public class User
+    public class UserRole
     {
         public long Id { get; set; }
-        public string FullName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public ICollection<UserRole> UserRoles { get; set; }
+        public long RoleId { get; set; }
+        public Role Role { get; set; }
+        public long UserId { get; set; }
+        public User User { get; set; }
+
     }
 }

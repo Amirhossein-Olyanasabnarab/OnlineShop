@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace OnlineShop.Domain.Entities.Users
 {
-    class Role
+    public class Role
     {
+        public long Id { get; set; }
+        public string Name { get; set; }
+        public ICollection<UserRole> UserRoles { get; set; }
     }
 }
